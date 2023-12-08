@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+body{
+    color: #fff;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    /*background-image: url(images/back.jpg);*/
+    background-color: #000000;
+    background-position: center;
+    background-size: cover;
+    padding-top: 35px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+nav{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo a{
+    font-size: 40px;
+    text-decoration: none;
+}
+span{
+    color: #ff9900;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    transition: 0.5s;
+}
+nav ul li a:hover{
+    color: #ff9900;
+}
+.login{
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 18px;
+}
+.btn{
+    background: #000;
+    border-radius: 6px;
+    padding: 9px 25px;
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 18px;
+}
+
+.content{
+    margin-top: 5%;
+    max-width: 600px;
+}
+.content h2{
+    font-size: 60px
+}
+.content p{
+    margin-top: 10px;
+    line-height: 25px;
+}
+a{
+    color: #fff;
+}
+.link {
+
+}
+.hire{
+    color: #000;
+    text-decoration: none;
+    background: #fff;
+    padding: 9px 25px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+.link .hire:hover{
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.code-snippet {
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #fff;
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+
+#typing-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 40px;
+    background-color: #fff;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 0;
+    }
+    25%, 75% {
+        opacity: 1;
+    }
+}
+
+.img-box{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.img-box img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.img-box:hover .back-img{
+    bottom: 40px;
+}
+
+.img-box:hover .main-img{
+    left: 54%;
+}
+

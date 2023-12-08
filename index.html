@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hassan's Portfolio</title>
+
+    <!---Custom Css File!--->
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<div class="container">
+    <nav>
+        <div class="logo">
+            <a href="#">Portfo<span>lio.</span></a>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="link">
+            <a href="#" class="hire">Download my CV</a>
+
+        </div>
+    </nav>
+    <div class="content">
+{{--        <h2>Hello,<br>It's Me CoderGirl</h2>--}}
+        <h2 id="dynamic-text">Hello, my name is Hassan Tahir.  I am a <span id="job-title">web developer</span><span id="typing-cursor"></span></h2>
+
+        <div class="modern-content">
+{{--            <div id="dynamic-text">Hello, my name is Hassan Tahir.  I am a <span id="job-title">web developer</span><span id="typing-cursor"></span></div>--}}
+            <div class="code-snippet">
+                <p>// Welcome to my coding space</p>
+                <p>function greetCoder(name) {</p>
+                <p>    return 'Hello, ' + name + '! Happy coding!';</p>
+                <p>}</p>
+                <p>let coderName = 'Hassan Tahir';</p>
+                <p>console.log(greetCoder(coderName));</p>
+            </div>
+{{--            <div class="button-container">--}}
+{{--                <button class="code-button">Explore Coding Projects</button>--}}
+{{--            </div>--}}
+        </div>
+{{--        <p>I'm A Web Developer & Designer. I Will Make Your Project Beautiful And Attractive,<br>You Can Find Me On GitHub.</p>--}}
+    </div>
+    <div class="link" style="margin-top: 30px">
+        <a href="#" class="hire">Hire Me</a>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pattern.png" class="back-img">
+        <img src="images/boy6.png" class="main-img">
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.8/dist/js/splide.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const jobTitle = document.getElementById('job-title');
+        const cursor = document.getElementById('typing-cursor');
+
+        setTimeout(() => {
+            eraseText(jobTitle, 'web designerr', 0);
+        }, 0);
+
+        function eraseText(element, text, index) {
+            if (index < text.length) {
+                element.textContent = text.substring(0, index);
+                setTimeout(() => {
+                    eraseText(element, text, index + 1);
+                }, 100);
+            } else {
+                setTimeout(() => {
+                    typeText(jobTitle, 'web developer', 0);
+                }, 3000);
+            }
+        }
+
+        function typeText(element, text, index) {
+            if (index < text.length) {
+                element.textContent = text.substring(0, index + 1);
+                setTimeout(() => {
+                    typeText(element, text, index + 1);
+                }, 100);
+            }
+        }
+
+        // Initialize Splide slider
+        new Splide('.splide', {
+            type       : 'fade',
+            heightRatio: 0.5,
+            pagination : false,
+            arrows     : false,
+            cover      : true,
+        }).mount();
+    });
+</script>
+</body>
+</html>
